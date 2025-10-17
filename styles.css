@@ -1,0 +1,87 @@
+body {
+  background-color: tan;
+}
+* {
+  margin: 10;
+  padding: 15;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background-color: #f0f2f5;
+}
+.hero {
+  background-color: #007acc;
+  color: #f0f2f5;
+  text-align: center;
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.navbar {
+  background-color: #2d3748;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.navbar a {
+  color: #f0f2f5;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.6s;
+}
+.navbar a:hover {
+  background-color: grey;
+}
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: grey;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px overflow hidden;
+}
+.sidebar {
+  background-color: ccd6e0;
+  padding: 2rem;
+  width: 300px;
+  min-height: 400px;
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+.sidebar h2 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.5;
+}
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: tan;
+}
+.main-content h2 {
+  color: #007acc;
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 0.5rem;
+}
+.profile-img {
+  height: 120px;
+  width: 120px;
+}
