@@ -1,20 +1,27 @@
-let username = "Travion";
-let number = "6"
-console.log(number );
-let numbers = 6;
-let x= number + numbers;
-let one = 1;
-let z = numbers+ one;
-console.log(z);
+// Get all navbar links
+const navLinks = document.querySelectorAll('.navbar a[data-target]');
+// Get all sections
+const sections = document.querySelectorAll('.section');
 
-let oneword = "travion";
-let twoword = "Moton";
-let cto = oneword + " " + twoword;
-console.log(cto);
-function add(a,b){
-let a =22;
-let b =10;
-let sum  = a +b;
-console.log(c);
+// Function to show a section
+function showSection(id) {
+  sections.forEach(sec => {
+    if (sec.id === id) {
+      sec.classList.add('active');
+    } else {
+      sec.classList.remove('active');
+    }
+  });
 }
-add(33,22); 
+
+// Default: show Home section
+showSection('home');
+
+// Add click events to navbar links
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = link.getAttribute('data-target');
+    showSection(target);
+  });
+});
