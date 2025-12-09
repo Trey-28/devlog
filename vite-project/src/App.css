@@ -68,7 +68,6 @@ body {
   background-color: #f9f9f9;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #main-title {
@@ -90,65 +89,23 @@ body {
   padding: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.with-example {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
 
-/* TEXT STYLES */
-.learning-text {
-  flex: 2;
-}
-
-.learning-text h4 {
+.learning-card h4 {
   margin-bottom: 0.5rem;
   color: #222;
 }
 
-.learning-text p {
+.learning-card p {
   line-height: 1.5;
   color: #444;
-}
-
-/* IMAGE EXAMPLES */
-.learning-example {
-  flex: 1;
-  text-align: center;
-}
-
-.learning-example img {
-  width: 100%;
-  max-width: 240px;
-  border-radius: 10px;
-  border: 2px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.learning-example small {
-  display: block;
-  margin-top: 0.4rem;
-  color: #666;
-  font-size: 0.8rem;
 }
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
-  }
-
-  .with-example {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .learning-example img {
-    max-width: 100%;
   }
 
   .sidebar {
