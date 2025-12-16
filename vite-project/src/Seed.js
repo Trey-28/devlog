@@ -11,12 +11,12 @@ async function main() {
       category: "Backend"
     }
   });
-  
-  console.log("✅ Test log created:", log);
+
+  console.log("Test log created:", log);
 }
 
 main()
   .catch((e) => {
-    console.error("❌ Error:", e);
+    console.error("Error:", e);
   })
   .finally(() => prisma.$disconnect());

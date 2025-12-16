@@ -107,11 +107,11 @@ function Wellness() {
       {/* Four Dimensions Grid */}
       <section className="dimensions-section">
         <h2 className="section-subtitle">Four Dimensions of Wellness</h2>
-        
+
         {/* Physical Wellness */}
         <div className="dimension-card">
           <div className="dimension-header physical">
-            <div className="dimension-icon">💪</div>
+            <div className="dimension-icon"></div>
             <h3 className="dimension-title">{physicalDimension.title}</h3>
           </div>
           <div className="dimension-content">
@@ -134,7 +134,7 @@ function Wellness() {
         {/* Mental Wellness */}
         <div className="dimension-card">
           <div className="dimension-header mental">
-            <div className="dimension-icon">🧠</div>
+            <div className="dimension-icon"></div>
             <h3 className="dimension-title">{mentalDimension.title}</h3>
           </div>
           <div className="dimension-content">
@@ -157,7 +157,7 @@ function Wellness() {
         {/* Emotional Wellness */}
         <div className="dimension-card">
           <div className="dimension-header emotional">
-            <div className="dimension-icon">❤️</div>
+            <div className="dimension-icon"></div>
             <h3 className="dimension-title">{emotionalDimension.title}</h3>
           </div>
           <div className="dimension-content">
@@ -180,7 +180,7 @@ function Wellness() {
         {/* Financial Wellness */}
         <div className="dimension-card">
           <div className="dimension-header financial">
-            <div className="dimension-icon">💰</div>
+            <div className="dimension-icon"></div>
             <h3 className="dimension-title">{financialDimension.title}</h3>
           </div>
           <div className="dimension-content">

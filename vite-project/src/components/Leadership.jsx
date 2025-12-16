@@ -66,8 +66,8 @@ function Leadership() {
       <header className="section-header">
         <h1 className="section-title">Leadership</h1>
         <p className="section-description">
-          Throughout the 16-week i.c.stars program, I've grown as a leader through service, 
-          collaboration, and self-awareness. These experiences have shaped how I show up in teams 
+          Throughout the 16-week i.c.stars program, I've grown as a leader through service,
+          collaboration, and self-awareness. These experiences have shaped how I show up in teams
           and how I define my role in the tech industry.
         </p>
       </header>
@@ -123,9 +123,9 @@ function Leadership() {
       <section className="leadership-closing section">
         <h2 className="section-subtitle">Leadership Moving Forward</h2>
         <p className="section-description">
-          As I transition from i.c.stars into my career, I'm bringing these leadership lessons with me: 
-          the importance of showing up consistently, the power of active listening, and the value of 
-          serving others. I'm committed to leading with humility, learning continuously, and using my 
+          As I transition from i.c.stars into my career, I'm bringing these leadership lessons with me:
+          the importance of showing up consistently, the power of active listening, and the value of
+          serving others. I'm committed to leading with humility, learning continuously, and using my
           technical skills to create meaningful impact in every team I join.
         </p>
       </section>
