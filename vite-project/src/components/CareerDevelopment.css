@@ -1,0 +1,408 @@
+/* ═══════════════════════════════════════════════════════════ */
+/* CAREER DEVELOPMENT COMPONENT STYLES */
+/* ═══════════════════════════════════════════════════════════ */
+
+.career-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* VISION SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+.vision-section {
+  margin-bottom: 3rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.vision-card {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-primary);
+}
+
+.vision-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+  border-color: var(--accent-primary);
+}
+
+.vision-label {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vision-text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* WORKSHOPS SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+.workshops-section {
+  margin-bottom: 3rem;
+}
+
+.workshops-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.workshop-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.workshop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+  border-color: var(--accent-primary);
+}
+
+.workshop-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.workshop-company {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.workshop-topic {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.workshop-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.workshop-block {
+  background: var(--bg-tertiary);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-primary);
+}
+
+.workshop-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem 0;
+}
+
+.workshop-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* CONFIDENCE TIMELINE */
+/* ═══════════════════════════════════════════════════════════ */
+.confidence-section {
+  margin-bottom: 3rem;
+}
+
+.confidence-timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.confidence-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+}
+
+.confidence-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.confidence-marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--bg-primary);
+}
+
+.confidence-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.confidence-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 20px var(--shadow-hover);
+  border-color: var(--accent-primary);
+}
+
+.confidence-phase {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.confidence-feeling,
+.confidence-growth {
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  line-height: 1.7;
+}
+
+.confidence-feeling {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--text-secondary);
+}
+
+.confidence-growth {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.confidence-feeling strong,
+.confidence-growth strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* SKILLS DEVELOPED SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+.skills-developed-section {
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skills-category-card {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skills-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+  border-color: var(--accent-primary);
+}
+
+.skills-category-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  padding: 0.5rem 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.skill-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* TARGET ROLES SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+.roles-section {
+  margin-bottom: 3rem;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.role-card {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+  border-color: var(--accent-primary);
+}
+
+.role-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--accent-primary);
+}
+
+.role-block {
+  margin-bottom: 1.5rem;
+}
+
+.role-block:last-child {
+  margin-bottom: 0;
+}
+
+.role-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem 0;
+}
+
+.role-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* PROFESSIONAL BRAND SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+.brand-section {
+  background: var(--bg-tertiary);
+  border-left: 4px solid var(--accent-primary);
+  margin-bottom: 3rem;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* CLOSING SECTION */
+/* ═══════════════════════════════════════════════════════════ */
+.career-closing {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+  border: none;
+}
+
+.career-closing .section-subtitle {
+  color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.career-closing .section-description {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/* RESPONSIVE DESIGN */
+/* ═══════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confidence-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .confidence-item {
+    padding-left: 1.5rem;
+  }
+
+  .confidence-marker {
+    left: -2rem;
+  }
+
+  .confidence-content:hover {
+    transform: translateX(5px);
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+}
