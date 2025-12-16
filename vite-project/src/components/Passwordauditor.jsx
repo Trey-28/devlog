@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Lock, Eye, EyeOff, CheckCircle2, AlertCircle, XCircle, AlertTriangle, Clock, Lightbulb } from 'lucide-react';
 import './PasswordAuditor.css';
 
 function PasswordAuditor() {
@@ -113,13 +114,15 @@ function PasswordAuditor() {
     return (
         <div className="password-auditor">
             <header className="auditor-header">
-                <h1>Password Strength Auditor</h1>
+                <h1><Lock className="inline-icon" size={28} /> Password Strength Auditor</h1>
                 <p className="auditor-subtitle">Analyze your password security in real-time</p>
             </header>
             <div className="auditor-input-section">
                 <div className="input-wrapper">
                     <input type={showPassword ? 'text' : 'password'} value={password} onChange={handlePasswordChange} placeholder="Enter a password to analyze..." className="password-input" autoComplete="off" />
-                    <button className="toggle-btn" onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</button>
+                    <button className="toggle-btn" onClick={() => setShowPassword(!showPassword)}>
+                        {showPassword ? <><EyeOff size={16} /> Hide</> : <><Eye size={16} /> Show</>}
+                    </button>
                 </div>
             </div>
             {password && analysis && (
@@ -136,34 +139,34 @@ function PasswordAuditor() {
                 <>
                     <div className="results-grid">
                         <div className="result-card">
-                            <div className="result-header"><span className="result-icon">{analysis.length >= 12 ? '✓' : analysis.length >= 8 ? '!' : '✗'}</span><h3>Length</h3></div>
+                            <div className="result-header"><span className="result-icon">{analysis.length >= 12 ? <CheckCircle2 size={20} /> : analysis.length >= 8 ? <AlertCircle size={20} /> : <XCircle size={20} />}</span><h3>Length</h3></div>
                             <p className="result-value">{analysis.length} characters</p>
                             <p className="result-desc">{analysis.length >= 12 ? 'Good length!' : 'Could be longer (12+ recommended)'}</p>
                         </div>
                         <div className="result-card">
-                            <div className="result-header"><span className="result-icon">{analysis.entropy.bits >= 60 ? '✓' : analysis.entropy.bits >= 40 ? '!' : '✗'}</span><h3>Entropy</h3></div>
+                            <div className="result-header"><span className="result-icon">{analysis.entropy.bits >= 60 ? <CheckCircle2 size={20} /> : analysis.entropy.bits >= 40 ? <AlertCircle size={20} /> : <XCircle size={20} />}</span><h3>Entropy</h3></div>
                             <p className="result-value">{Math.round(analysis.entropy.bits)} bits</p>
                             <p className="result-desc">{analysis.entropy.bits >= 60 ? 'High randomness!' : 'Increase randomness'}</p>
                         </div>
                         <div className="result-card">
-                            <div className="result-header"><span className="result-icon">{analysis.variety.types === 4 ? '✓' : analysis.variety.types >= 3 ? '!' : '✗'}</span><h3>Character Variety</h3></div>
+                            <div className="result-header"><span className="result-icon">{analysis.variety.types === 4 ? <CheckCircle2 size={20} /> : analysis.variety.types >= 3 ? <AlertCircle size={20} /> : <XCircle size={20} />}</span><h3>Character Variety</h3></div>
                             <p className="result-value">{analysis.variety.types}/4 types</p>
                             <p className="result-desc">{analysis.variety.types === 4 ? 'All types used!' : `Using ${analysis.variety.types} types`}</p>
                         </div>
                         <div className="result-card">
-                            <div className="result-header"><span className="result-icon">{analysis.patterns.count === 0 ? '✓' : analysis.patterns.count <= 2 ? '!' : '✗'}</span><h3>Pattern Check</h3></div>
+                            <div className="result-header"><span className="result-icon">{analysis.patterns.count === 0 ? <CheckCircle2 size={20} /> : analysis.patterns.count <= 2 ? <AlertCircle size={20} /> : <XCircle size={20} />}</span><h3>Pattern Check</h3></div>
                             <p className="result-value">{analysis.patterns.count === 0 ? 'None found' : `${analysis.patterns.count} found`}</p>
                             <p className="result-desc">{analysis.patterns.count === 0 ? 'No patterns detected!' : 'Contains common patterns'}</p>
                         </div>
                     </div>
                     {analysis.vulnerabilities.length > 0 && (
                         <div className="vulnerabilities-section">
-                            <h2>Vulnerabilities Found</h2>
+                            <h2><AlertTriangle className="inline-icon" size={24} /> Vulnerabilities Found</h2>
                             <ul className="vulnerability-list">{analysis.vulnerabilities.map((vuln, index) => <li key={index}>{vuln}</li>)}</ul>
                         </div>
                     )}
                     <div className="crack-time-section">
-                        <h2>Estimated Crack Time</h2>
+                        <h2><Clock className="inline-icon" size={24} /> Estimated Crack Time</h2>
                         <div className="crack-time-grid">
                             <div className="crack-method"><h4>Online Attack</h4><p className="crack-time">{calculateCrackTime(analysis.entropy.bits).online}</p><small>~100 attempts/second</small></div>
                             <div className="crack-method"><h4>Offline (Slow Hash)</h4><p className="crack-time">{calculateCrackTime(analysis.entropy.bits).offlineSlow}</p><small>~10,000 attempts/second</small></div>
@@ -173,7 +176,7 @@ function PasswordAuditor() {
                 </>
             )}
             <div className="tips-section">
-                <h2>Password Best Practices</h2>
+                <h2><Lightbulb className="inline-icon" size={24} /> Password Best Practices</h2>
                 <ul className="tips-list">
                     <li>Use at least 12 characters (16+ is better)</li>
                     <li>Mix uppercase, lowercase, numbers, and symbols</li>

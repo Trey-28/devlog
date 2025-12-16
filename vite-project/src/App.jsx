@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Sun, Moon } from "lucide-react";
 import "./App.css";
 import { useTheme } from "./context/ThemeContext";
 
@@ -30,10 +31,10 @@ function App() {
           <h1 className="portfolio-title">Travion Ashford</h1>
           <div className="header-controls">
             <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
-              {isDarkMode ? '☀️' : '🌙'}
+              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <button 
-              className={`hamburger ${menuOpen ? 'active' : ''}`} 
+            <button
+              className={`hamburger ${menuOpen ? 'active' : ''}`}
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -94,7 +95,7 @@ function App() {
               <h2 className="hero-title">Cybersecurity Professional | Full-Stack Developer</h2>
               <p className="hero-subtitle">i.c.stars Cycle 58 | Chicago, IL</p>
               <p className="hero-description">
-                Results-driven technology professional with expertise in cybersecurity and full-stack development. 
+                Results-driven technology professional with expertise in cybersecurity and full-stack development.
                 Passionate about building secure, scalable solutions and continuous learning.
               </p>
               <div className="contact-info">

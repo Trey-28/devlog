@@ -1,4 +1,5 @@
 import '../App.css';
+import { Dumbbell, Brain, Heart, DollarSign } from 'lucide-react';
 import './Wellness.css';
 
 function Wellness() {
@@ -111,7 +112,7 @@ function Wellness() {
         {/* Physical Wellness */}
         <div className="dimension-card">
           <div className="dimension-header physical">
-            <div className="dimension-icon"></div>
+            <div className="dimension-icon"><Dumbbell size={32} /></div>
             <h3 className="dimension-title">{physicalDimension.title}</h3>
           </div>
           <div className="dimension-content">
@@ -134,7 +135,7 @@ function Wellness() {
         {/* Mental Wellness */}
         <div className="dimension-card">
           <div className="dimension-header mental">
-            <div className="dimension-icon"></div>
+            <div className="dimension-icon"><Brain size={32} /></div>
             <h3 className="dimension-title">{mentalDimension.title}</h3>
           </div>
           <div className="dimension-content">
@@ -157,7 +158,7 @@ function Wellness() {
         {/* Emotional Wellness */}
         <div className="dimension-card">
           <div className="dimension-header emotional">
-            <div className="dimension-icon"></div>
+            <div className="dimension-icon"><Heart size={32} /></div>
             <h3 className="dimension-title">{emotionalDimension.title}</h3>
           </div>
           <div className="dimension-content">
@@ -180,7 +181,7 @@ function Wellness() {
         {/* Financial Wellness */}
         <div className="dimension-card">
           <div className="dimension-header financial">
-            <div className="dimension-icon"></div>
+            <div className="dimension-icon"><DollarSign size={32} /></div>
             <h3 className="dimension-title">{financialDimension.title}</h3>
           </div>
           <div className="dimension-content">
